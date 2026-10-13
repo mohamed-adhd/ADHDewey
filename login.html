@@ -1,9 +1,9 @@
 <!DOCTYPE html>
     <head>
         <title>ADHDEWEY</title>
-        <link rel="stylesheet" href="/login.css">
-        <link rel="stylesheet" href="/shared.css">
-        <script src="/js/login.html"></script>
+        <link rel="stylesheet" href="css/login.css">
+        <link rel="stylesheet" href="shared.css">
+        <script src="js/login.js"></script>
 
         
     
@@ -11,18 +11,63 @@
     
     </head>
     <body>
-        <nav>
-            <h1 style="text-align: center;">login</h1>
-            
+        <div class="heads">
+            <nav >
+                
+            <h1 style="text-align: center;">login</h1>    
         </nav>
-        <div style="text-align: center;">
-            <input placeholder="username or email" id="username">
         </div>
-        <div style="text-align: center;">
-                        <input placeholder="password" id="password">
-        </div>
+        <div class="spacer"></div>
+            <form id="login-form">
+                  <div style="display: flex; flex-direction: column; align-items: center; gap: 1rem;">
+                    <div class="floating-input-group">
+                    <input type="text" class="floating-input" placeholder=" " id="email">
+                    <label class="floating-label" for="email">Email Address</label>
+                    </div>
+                    <div class="floating-input-group">
+                    <input type="text" class="floating-input" placeholder=" " id="password">
+                    <label class="floating-label" for="email">Email Address</label>
+                    </div>
+                </div>
                 <div style="text-align: center;">
-<button style="text-align: center;">login</button>
+        <div class="buttons">
+  <button class="blob-btn" onclick="logincheck()">
+    login
+    <span class="blob-btn__inner">
+      <span class="blob-btn__blobs">
+        <span class="blob-btn__blob"></span>
+        <span class="blob-btn__blob"></span>
+        <span class="blob-btn__blob"></span>
+        <span class="blob-btn__blob"></span>
+      </span>
+    </span>
+  </button>
+  <br/>
+  <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+  <defs>
+    <filter id="goo">
+      <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10"></feGaussianBlur>
+      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7" result="goo"></feColorMatrix>
+      <feBlend in2="goo" in="SourceGraphic" result="mix"></feBlend>
+    </filter>
+  </defs>
+</svg>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </form>
+            <p id="error-box"></p>
+
 </div>
 
 
