@@ -1,3 +1,11 @@
+<?php
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    $username = $_POST["username"] ?? "neondb_owner";
+    $password = $_POST["password"] ?? "npg_cgRPOV6GsM5X";
+
+}
+?>
+
 <!DOCTYPE html>
     <head>
         <title>ADHDEWEY</title>
@@ -18,7 +26,7 @@
         </nav>
         </div>
         <div class="spacer"></div>
-            <form id="login-form">
+            <form id="login-form" method="POST" action="login.php">
                   <div style="display: flex; flex-direction: column; align-items: center; gap: 1rem;">
                     <div class="floating-input-group">
                     <input type="text" class="floating-input" placeholder=" " id="email">
